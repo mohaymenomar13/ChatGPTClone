@@ -1,0 +1,49 @@
+.userMessagePane{
+    -fx-background-radius: 30px;
+    -fx-background-color: #2f2f2f;
+    -fx-padding: 15px;
+}
+
+.userMessageText{
+    -fx-font-size: 20px;
+    -fx-fill: white;
+    -fx-translate-x: 15;
+    -fx-translate-y: 35;
+    -fx-text-alignment: right;
+}
+
+.chatgptMessageText{
+    -fx-font-size: 20px;
+    -fx-fill: white;
+    -fx-translate-x: 65px;
+    -fx-translate-y: 30px;
+    -fx-text-alignment: left;
+}
+
+.chatSectionPanel {
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+    -fx-font-family: "Arial";
+    
+    -fx-translate-x: 20px;
+    -fx-pref-width: 280px;
+    -fx-pref-height: 40px;
+}
+
+.scroll-pane .scroll-bar {
+    -fx-background-color: transparent; 
+}
+
+.scroll-pane .scroll-bar:horizontal .track,
+.scroll-pane .scroll-bar:vertical .track {
+    -fx-background-color: transparent; 
+}
+
+.scroll-pane .scroll-bar:horizontal .thumb,
+.scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: #2f2f2f; 
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}

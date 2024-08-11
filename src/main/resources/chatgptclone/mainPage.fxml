@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane cacheShape="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="877.0" prefWidth="1536.0" scaleShape="false" style="-fx-background-color: #212121;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chatgptclone.mainPageController">
+   <children>
+      <ScrollPane hbarPolicy="NEVER" layoutX="-22.0" layoutY="-77.0" prefWidth="309.0" scaleX="0.85" scaleY="0.85" style="-fx-background-color: transparent;">
+         <content>
+            <AnchorPane prefHeight="1031.0" prefWidth="324.0" style="-fx-background-color: #171717;">
+               <children>
+                  <VBox>
+                     <children>
+                        <Pane prefHeight="202.0" prefWidth="323.0">
+                           <children>
+                              <ImageView fitHeight="29.0" fitWidth="26.0" layoutX="259.0" layoutY="112.0" onMouseClicked="#newChat" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/new.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="1.0" />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                              <Group layoutX="40.0" layoutY="124.0">
+                                 <children>
+                                    <Circle fill="#212121" radius="17.0" stroke="#434343" strokeType="INSIDE" />
+                                    <ImageView fitHeight="28.0" fitWidth="26.0" layoutX="-13.0" layoutY="-13.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img/logo.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Group>
+                              <Text fill="#d7d7d7" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chat Section" wrappingWidth="227.49220275878906" x="15.0" y="150.0">
+                                 <font>
+                                    <Font name="Arial Bold" size="15.0" />
+                                 </font>
+                              </Text>
+                              <Label layoutX="67.0" layoutY="103.0" onMouseClicked="#newChat" prefHeight="40.0" prefWidth="200.0" text="New chat" textFill="WHITE">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="21.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane>
+                           <children>
+                              <VBox fx:id="chatSectionPanel" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <Pane layoutX="108.0" layoutY="-104.0" prefHeight="1082.0" prefWidth="1603.0" scaleX="0.8" scaleY="0.81">
+         <children>
+            <Group layoutX="1552.0" layoutY="69.0">
+               <children>
+                  <Circle fill="#9b58b4" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Text fx:id="pfp2L" fill="WHITE" layoutX="-14.0" layoutY="6.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MO" textAlignment="CENTER" wrappingWidth="28.2371826171875">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Group>
+            <Text fill="WHITE" layoutX="25.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ChatGPT" wrappingWidth="225.63284301757812">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Text>
+            <Pane fx:id="newTab" layoutX="345.0" layoutY="332.0" prefHeight="285.0" prefWidth="928.0">
+               <children>
+                  <ImageView fitHeight="71.0" fitWidth="68.0" layoutX="420.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/logo3.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust brightness="1.0" />
+                     </effect>
+                  </ImageView>
+                  <Pane layoutX="22.0" layoutY="133.0" onMouseClicked="#promptIdea" opacity="0.7" prefHeight="120.0" prefWidth="200.0" style="-fx-border-color: gray; -fx-border-radius: 20px;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="22.0" layoutX="16.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/bulb.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="suggestPromptIdea" fill="WHITE" layoutX="16.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Activities to make friends in new city" wrappingWidth="176.5367431640625">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="245.0" layoutY="133.0" onMouseClicked="#promptKnowledge" opacity="0.7" prefHeight="120.0" prefWidth="200.0" style="-fx-border-color: gray; -fx-border-radius: 20px;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <children>
+                        <ImageView fitHeight="22.0" fitWidth="29.0" layoutX="13.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/knowledge.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="suggestPromptKnowledge" fill="WHITE" layoutX="14.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Explain nostalgia to a kindergartener" wrappingWidth="184.5367431640625">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="465.0" layoutY="133.0" onMouseClicked="#promptShopping" opacity="0.7" prefHeight="120.0" prefWidth="200.0" style="-fx-border-color: gray; -fx-border-radius: 20px;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <children>
+                        <ImageView fitHeight="22.0" fitWidth="29.0" layoutX="16.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/shopping.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="suggestPromptShopping" fill="WHITE" layoutX="15.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pick outfit to look good on camera" wrappingWidth="178.1368408203125">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="687.0" layoutY="133.0" onMouseClicked="#promptProgramming" opacity="0.7" prefHeight="120.0" prefWidth="200.0" style="-fx-border-color: gray; -fx-border-radius: 20px;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <children>
+                        <ImageView fitHeight="22.0" fitWidth="29.0" layoutX="16.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/programming.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="suggestPromptProgramming" fill="WHITE" layoutX="15.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Python script for daily email reports" wrappingWidth="178.1368408203125">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <ScrollPane fx:id="chatBoardScrollPane" hbarPolicy="NEVER" layoutX="287.0" layoutY="-1.0" style="-fx-background-color: transparent;" visible="false">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <content>
+                  <AnchorPane prefHeight="939.0" prefWidth="1023.0" style="-fx-background-color: #212121;">
+                     <children>
+                        <VBox fx:id="chatBoard" prefWidth="1023.0">
+                           <padding>
+                              <Insets right="30.0" top="150.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <Pane layoutX="316.0" layoutY="931.0" prefHeight="68.0" prefWidth="966.0" style="-fx-border-radius: 50px; -fx-border-color: gray; -fx-background-radius: 50px; -fx-background-color: #2f2f2f;">
+               <children>
+                  <ImageView fitHeight="34.0" fitWidth="29.0" layoutX="18.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/file.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust brightness="1.0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Group layoutX="934.0" layoutY="35.0">
+                     <children>
+                        <Circle fill="#676767" radius="21.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                        <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="-14.0" layoutY="-14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/send.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="0.08" />
+                           </effect>
+                        </ImageView>
+                     </children>
+                  </Group>
+                  <TextField fx:id="textField" layoutX="58.0" layoutY="6.0" onAction="#sendMessage" prefHeight="55.0" prefWidth="848.0" promptText="Message ChatGPT" style="-fx-background-color: transparent; -fx-text-fill: white;">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+            <Text fill="#848484" layoutX="628.0" layoutY="1019.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ChatGPT can make mistakes. Check important info." wrappingWidth="401.33673095703125">
+               <font>
+                  <Font size="15.5" />
+               </font>
+            </Text>
+            <ImageView fitHeight="877.0" fitWidth="1536.0" layoutX="-116.0" layoutY="69.0" pickOnBounds="true" visible="false">
+               <image>
+                  <Image url="@../../../../../../MyJavaApp/img/dasdasd.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

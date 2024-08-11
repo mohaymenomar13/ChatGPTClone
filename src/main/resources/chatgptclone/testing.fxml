@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="500.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="72.0" fitWidth="79.0" layoutX="211.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/logo2.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="94.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome back">
+         <font>
+            <Font name="Arial Bold" size="45.0" />
+         </font>
+      </Text>
+      <TextField layoutX="56.0" layoutY="237.0" prefHeight="58.0" prefWidth="389.0" style="-fx-background-color: transparent; -fx-border-color: darkgreen; -fx-border-radius: 5px;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="16.0" layoutX="68.0" layoutY="229.0" stroke="TRANSPARENT" strokeType="INSIDE" width="108.0" />
+      <Text fill="#01a92e" layoutX="70.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Address" wrappingWidth="107.79998779296875">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Text>
+      <Button layoutX="55.0" layoutY="315.0" mnemonicParsing="false" onAction="#continueBtn" prefHeight="58.0" prefWidth="390.0" style="-fx-background-color: #10a37f; -fx-border-radius: 20px;" text="Continue" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text layoutX="117.0" layoutY="416.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account? " wrappingWidth="206.0">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Text>
+      <Text accessibleRole="HYPERLINK" fill="#3bad8f" layoutX="313.0" layoutY="416.0" onMouseClicked="#gotoCreateAccount" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up" wrappingWidth="93.2000732421875">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Text>
+      <Button layoutX="460.0" layoutY="4.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="X">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text fill="RED" layoutX="61.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*The email is not registered. Please try again." textAlignment="CENTER" visible="false" wrappingWidth="379.60003662109375">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
